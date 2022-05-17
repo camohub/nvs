@@ -1,8 +1,8 @@
 #!/bin/bash
 
 www_dir=/var/www
-www_new_app_dir=$www_dir/deploy-new-tatrytec.eu
-www_old_app_dir=$www_dir/deploy-old-tatrytec.eu
+www_new_app_dir=$www_dir/deploy-new-nvs.tatrytec.eu
+www_old_app_dir=$www_dir/deploy-old-nvs.tatrytec.eu
 
 
 # git clone is in the pipeline gonfiguration
@@ -12,10 +12,10 @@ echo "---------------------------------------------------"
 echo " git clone done "
 echo "---------------------------------------------------"
 
-cp $www_dir/tatrytec.eu/.env $www_new_app_dir
+cp $www_dir/nvs.tatrytec.eu/.env $www_new_app_dir
 mkdir -p $www_new_app_dir/storage/framework/
-cp -R $www_dir/tatrytec.eu/storage/framework/sessions/ $www_new_app_dir/storage/framework/
-cp -R $www_dir/tatrytec.eu/storage/app/ $www_new_app_dir/storage/
+cp -R $www_dir/nvs.tatrytec.eu/storage/framework/sessions/ $www_new_app_dir/storage/framework/
+cp -R $www_dir/nvs.tatrytec.eu/storage/app/ $www_new_app_dir/storage/
 echo "---------------------------------------------------"
 echo " .env file + session files + storage/app copy done "
 echo "---------------------------------------------------"
@@ -56,17 +56,17 @@ echo "---------------------------------------------------"
 echo " chmod + chgrp + setfacl for storage ans cache done "
 echo "---------------------------------------------------"
 
-mv $www_dir/tatrytec.eu $www_old_app_dir
+mv $www_dir/nvs. $www_old_app_dir
 echo "---------------------------------------------------"
 echo " old app folder rename done "
 echo "---------------------------------------------------"
 
-mv $www_new_app_dir $www_dir/tatrytec.eu
+mv $www_new_app_dir $www_dir/nvs.tatrytec.eu
 echo "---------------------------------------------------"
 echo " new app folder rename done "
 echo "---------------------------------------------------"
 
-cd $www_dir/tatrytec.eu
+cd $www_dir/nvs.tatrytec.eu
 # After rename to final destination name because cache stores the full paths
 php artisan migrate
 php artisan config:cache
@@ -92,5 +92,6 @@ rm -rf $www_old_app_dir
 
 echo "---------------------------------------------------"
 echo " DEPLOY IS DONE. CHECK ERROR MESSAGES. "
+echo "---------------------------------------------------"
 echo "---------------------------------------------------"
 
