@@ -56,7 +56,7 @@ echo "---------------------------------------------------"
 echo " chmod + chgrp + setfacl for storage ans cache done "
 echo "---------------------------------------------------"
 
-mv $www_dir/nvs. $www_old_app_dir
+mv $www_dir/nvs.tatrytec.eu $www_old_app_dir
 echo "---------------------------------------------------"
 echo " old app folder rename done "
 echo "---------------------------------------------------"
@@ -67,8 +67,7 @@ echo " new app folder rename done "
 echo "---------------------------------------------------"
 
 cd $www_dir/nvs.tatrytec.eu
-# After rename to final destination name because cache stores the full paths
-php artisan migrate
+# After renamchmod + chgrp + setfacl for storage ans cache done igrate
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache
@@ -95,4 +94,4 @@ echo " DEPLOY IS DONE. CHECK ERROR MESSAGES. "
 echo "---------------------------------------------------"
 echo "---------------------------------------------------"
 
-echo "Bye Bye"
+echo "Bye Bye Bye"
