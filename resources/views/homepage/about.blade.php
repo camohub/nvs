@@ -15,17 +15,17 @@
 			<div id="about" class="translateInit-3 translate">
 				<h1>O mne</h1>
 				<p class="mt-3 fs-30">
-					<span class="about-hover">Programovanie webových stránok</span>,
-					<span class="about-hover">eshopov</span> a <span class="about-hover">custom riešení na mieru</span>,
-					<span class="about-hover">správa serverov</span>,
+					<span class="about-hover">SCRUM</span>,
+					<span class="about-hover">Analýza dát</span>,
+					<span class="about-hover">Modelovanie procesov</span>, ...
 				</p>
 				<p class="mt-3 fs-30">
-					<span class="about-hover">PHP</span>,
-					<span class="about-hover">Mysql</span>,
-					<span class="about-hover">Postgresql</span>,
-					<span class="about-hover">Javascript</span>,
-
-					...
+					<span class="about-hover">Zodpovednosť</span>,
+					<span class="about-hover">Precíznosť</span>,
+					<span class="about-hover">Strategické myslenie</span>,
+					<span class="about-hover">Komunikatívnosť</span>,
+					<span class="about-hover">Otvorenosť</span>,
+					<span class="about-hover">Empatia</span>, ...
 				</p>
 			</div>
 		</div>

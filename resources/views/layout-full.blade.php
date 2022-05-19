@@ -15,7 +15,7 @@
 	<div id="header-wrapper" class="bS2">
 		<div class="container">
 			<div class="row oH">
-				<h1 id="header" class="col-12 oH translate translateInit">Filip<span id="header-effect">sramko</span>.sk</h1>
+				<h1 id="header" class="col-12 oH translate translateInit"><span id="header-effect">Filip </span> Šramko</h1>
 			</div>
 		</div>
 	</div>
