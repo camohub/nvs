@@ -5,7 +5,7 @@ www_new_app_dir=$www_dir/deploy-new-filipsramko.sk
 www_old_app_dir=$www_dir/deploy-old-filipsramko.sk
 
 
-# git clone is in the pipeline gonfiguration
+# !!!git clone is in the pipeline gonfiguration
 #git clone https://github.com/camohub/tatrytec.eu.git $www_new_app_dir
 cd $www_new_app_dir
 echo "---------------------------------------------------"
