@@ -22,8 +22,22 @@ class ArticleController extends BaseController
 	const PER_PAGE = 7;
 
 
-	public function index(Request $request, $slug, $page = 1)
+	public function index(Request $request)
 	{
+
+    $view = [
+      'category_id' => session(self::SESS_ID),
+      //'article' => $article,
+      //'comments' => $article->comments()->paginate(15, ['*'], 'komentare')->onEachSide(1),
+      'fb' => TRUE,
+      'google' => TRUE,
+      //'metaDesc' => $article->meta_desc,
+      //'title' => $article->title,
+    ];
+
+    return view('article.index', $view);
+
+    /*
 		if( $category = Category::where('slug', $slug)->first() )  // Displays category.
 		{
 			session([self::SESS_ID => $category->id]);
@@ -52,9 +66,12 @@ class ArticleController extends BaseController
 				'metaDesc' => $article->meta_desc,
 				'title' => $article->title,
 			];
-		}
 
+		}
 		return view('article.index', $view);
+
+    */
+
 	}
 
 
