@@ -94,4 +94,4 @@ echo " DEPLOY IS DONE. CHECK ERROR MESSAGES. "
 echo "---------------------------------------------------"
 echo "---------------------------------------------------"
 
-echo "Bye Bye"
+echo "Bye"
