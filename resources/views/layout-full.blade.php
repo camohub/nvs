@@ -23,7 +23,7 @@
 	<div class="container zI10">
 		<div class="row pT50">
 
-			@include('components.sidebar.sidebar')
+			{{--@include('components.sidebar.sidebar')--}}
 
 			<div id="main" class="translateInit translate-2 col-xs-12 col-sm-8 col-md-9 col-lg-8">
 
