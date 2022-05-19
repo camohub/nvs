@@ -3,6 +3,6 @@
 		<li><a href="{{route('welcome')}}">Vitajte</a></li>
 		<li><a href="{{route('about')}}">O mne</a></li>
 		<li><a href="{{route('contact')}}">Kontakt</a></li>
-		{{--<li><a href="{{route('articles', ['slug' => 'najnovsie'])}}">Blog</a></li>--}}
+		<li><a href="{{route('articles', ['slug' => 'najnovsie'])}}">Blog</a></li>
 	</ul>
 </div>
