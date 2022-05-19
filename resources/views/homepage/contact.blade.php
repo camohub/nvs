@@ -14,8 +14,8 @@
 		<div id="content">
 			<div id="contact" class="translateInit-2 translate">
 				<h1>Kontakt</h1>
-				<div>mail:&nbsp;postmaster@tatrytec.eu</div>
-				<div>tel: 0908 534 237</div>
+				<div>mail:&nbsp;filip.sramko@gmail.com</div>
+				<div>tel: 0908 833 487</div>
 			</div>
 		</div>
 
