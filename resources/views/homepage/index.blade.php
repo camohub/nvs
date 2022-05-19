@@ -13,8 +13,8 @@
 
 		<div id="content">
 			<div id="welcome" class="translateInit translate">
-				<h1>Tatrytec.eu</h1>
-				<div>Let your dreams <br>come true...</div>
+				<h1>Filip&nbsp;Šramko</h1>
+				<div>Mojim záujmom je pomáhať ľuďom, <br>v rámci mojich možností.</div>
 			</div>
 		</div>
 
