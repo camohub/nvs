@@ -1,6 +1,5 @@
 @php
     use Illuminate\Support\Facades\Request;
-	use Illuminate\Support\Facades\URL;
 @endphp
 <!DOCTYPE html>
 <html itemscope itemtype="https://schema.org/Article">
@@ -16,11 +15,11 @@
 
 	<meta charset="utf-8">
 	<meta name="csrf-token" content="{{csrf_token()}}">
-	<meta name="description" content="@yield('metaDescription', 'Počítače, webové technológie, servery, databázy, ...')">
+	<meta name="description" content="@yield('Filip Šramko, Analitika, Modelovanie procesov, Precíznosť, ...')">
 	@if(isset($metaRobots))<meta name="robots" content="@yield('metaRobots', 'index,follow')">@endif
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="icon" href="{{ URL::asset('/favicon.png') }}" type="image/x-icon"/>
+	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.png') }}">
 	<link rel="stylesheet" href="{{mix('css/app.css')}}">
 	<link rel='shortcut icon' type='image/x-icon' href="@assets('/favicon.ico')"/>
 	<script src="https://kit.fontawesome.com/6a9f67289a.js" crossorigin="anonymous"></script>
