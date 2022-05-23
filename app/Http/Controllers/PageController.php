@@ -16,11 +16,9 @@ use Illuminate\Support\Facades\Log;
 class PageController extends BaseController
 {
 
-	public function index($page)
+	public function curiculum()
 	{
-		if( !$page = Page::where('slug', $page)->first() ) abort(404);
-
-		return view('page.index', ['page' => $page]);
+    return view('page.curiculum');
 	}
 
 }

@@ -22,57 +22,40 @@ class ArticleController extends BaseController
 	const PER_PAGE = 7;
 
 
-	public function index(Request $request)
-	{
+  public function index(Request $request, $slug, $page = 1)
+  {
+    if( $category = Category::where('slug', $slug)->first() )  // Displays category.
+    {
+      session([self::SESS_ID => $category->id]);
+      $articles = $this->getCategoryArticles($category, $request);
+      $paginator = new Paginator($request, $articles, 'articles', ['slug' => $slug], self::PER_PAGE);
 
-    $view = [
-      'category_id' => session(self::SESS_ID),
-      //'article' => $article,
-      //'comments' => $article->comments()->paginate(15, ['*'], 'komentare')->onEachSide(1),
-      'fb' => TRUE,
-      'google' => TRUE,
-      //'metaDesc' => $article->meta_desc,
-      //'title' => $article->title,
-    ];
+      $view = [
+        //'articles' => $articles,
+        'articles' => $paginator->getItems(),
+        'paginator' => $paginator,
+        'category_id' => $category->id,
+        'metaDesc' => $category->name,
+        'title' => $category->name,
+      ];
+    }
+    else // Displays one article.
+    {
+      if ( ! $article = Article::where('slug', $slug)->first() ) abort(404);
+
+      $view = [
+        'category_id' => session(self::SESS_ID),
+        'article' => $article,
+        //'comments' => $article->comments()->paginate(15, ['*'], 'komentare')->onEachSide(1),
+        'fb' => TRUE,
+        'google' => TRUE,
+        'metaDesc' => $article->meta_desc,
+        'title' => $article->title,
+      ];
+    }
 
     return view('article.index', $view);
-
-    /*
-		if( $category = Category::where('slug', $slug)->first() )  // Displays category.
-		{
-			session([self::SESS_ID => $category->id]);
-			$articles = $this->getCategoryArticles($category, $request);
-			$paginator = new Paginator($request, $articles, 'articles', ['slug' => $slug], self::PER_PAGE);
-
-			$view = [
-				//'articles' => $articles,
-				'articles' => $paginator->getItems(),
-				'paginator' => $paginator,
-				'category_id' => $category->id,
-				'metaDesc' => $category->name,
-				'title' => $category->name,
-			];
-		}
-		else // Displays one article.
-		{
-			if ( ! $article = Article::where('slug', $slug)->first() ) abort(404);
-
-			$view = [
-				'category_id' => session(self::SESS_ID),
-				'article' => $article,
-				//'comments' => $article->comments()->paginate(15, ['*'], 'komentare')->onEachSide(1),
-				'fb' => TRUE,
-				'google' => TRUE,
-				'metaDesc' => $article->meta_desc,
-				'title' => $article->title,
-			];
-
-		}
-		return view('article.index', $view);
-
-    */
-
-	}
+  }
 
 
 	public function addComment( CommentsRequest $request, CommentsService $commentService )
