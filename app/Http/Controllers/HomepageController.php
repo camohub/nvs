@@ -9,6 +9,7 @@ use App\Models\Entities\Category;
 use App\Models\Entities\Comment;
 use App\Models\Services\CommentsService;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 
 
@@ -30,4 +31,12 @@ class HomepageController extends BaseController
 	{
 		return view('homepage.contact', []);
 	}
+
+  public function downloadCV()
+  {
+    $fileName = 'Filip_Sramko_CV.pdf';
+    $filePath = public_path('files/Filip_Sramko_CV.pdf');
+    $headers = ['Content-Type: application/pdf'];
+    return Response()->download($filePath, $fileName, $headers);
+  }
 }

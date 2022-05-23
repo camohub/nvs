@@ -3,6 +3,6 @@
 		<li><a href="{{route('welcome')}}">Vitajte</a></li>
 		<li><a href="{{route('about')}}">O mne</a></li>
 		<li><a href="{{route('contact')}}">Kontakt</a></li>
-		<li><a href="{{route('articles')}}">Životopis</a></li>
+		<li><a href="{{asset('zivotopis')}}">Životopis</a></li>
 	</ul>
 </div>
