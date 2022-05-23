@@ -100,22 +100,32 @@ video {
 	color: #ebf0ff;
 }
 
-@media ( max-width: 1020px ) {
+@media ( max-width: 1250px ) {
 
 	#wrapper {
 		flex-direction: column;
 		#content {
 			font-size: 25px !important;
 			padding: 25px;
-			text-align: center;
+			text-align: left;
+			width: 100%;
+			max-width: 100%;
 		}
 
 		#side {
 			padding: 25px;
+			width: 100%;
+
+			ul {
+				padding: 0 !important;
+				margin: 0 !important;
+				list-style: none;
+				list-style-type: none;
+				text-align: left;
+			}
 
 			ul li {
-				padding: 7px;
-				text-align: center;
+				padding: 7px 0 !important;
 			}
 		}
 
