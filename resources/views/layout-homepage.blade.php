@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="{{mix('css/homepage.css')}}">
 	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.png') }}">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css" integrity="sha512-OivR4OdSsE1onDm/i3J3Hpsm5GmOVvr9r49K3jJ0dnsxVzZgaOJ5MfxEAxCyGrzWozL9uJGKz6un3A7L+redIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	@if(isset($fb))
 		<meta property="og:url" content="{{Request::fullUrl()}}"/>
