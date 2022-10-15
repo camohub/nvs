@@ -32,11 +32,12 @@ class HomepageController extends BaseController
 		return view('homepage.contact', []);
 	}
 
-  public function downloadCV()
-  {
-    $fileName = 'Filip_Sramko_CV.pdf';
-    $filePath = public_path('files/Filip_Sramko_CV.pdf');
-    $headers = ['Content-Type: application/pdf'];
-    return Response()->download($filePath, $fileName, $headers);
-  }
+
+	public function downloadCV()
+	{
+		$fileName = 'Filip_Sramko_CV.pdf';
+		$filePath = public_path('files/Filip_Sramko_CV.pdf');
+		$headers = ['Content-Type: application/pdf'];
+		return Response()->download($filePath, $fileName, $headers);
+	}
 }
